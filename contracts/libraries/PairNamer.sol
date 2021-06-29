@@ -4,7 +4,7 @@ import './SafeERC20Namer.sol';
 
 // produces names for pairs of tokens using Defimist's naming scheme
 library PairNamer {
-    string private constant TOKEN_PAIR_PREFIX = 'DMS';
+    string private constant TOKEN_PAIR_PREFIX = 'DMF';
     string private constant TOKEN_SEPARATOR = ':';
 
     // produces a pair descriptor in the format of `${prefix}${name0}:${name1}${suffix}`
@@ -20,7 +20,7 @@ library PairNamer {
         );
     }
 
-    // produces a pair symbol in the format of `DMS:${symbol0}:${symbol1}${suffix}`
+    // produces a pair symbol in the format of `DMF:${symbol0}:${symbol1}${suffix}`
     function pairSymbol(address token0, address token1, string memory suffix) internal view returns (string memory) {
         return string(
             abi.encodePacked(
